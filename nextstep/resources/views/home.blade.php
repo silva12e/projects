@@ -19,15 +19,6 @@
                 <li>
 
                 <div class="media">
-                    <a class="pull-left" href="/admin/profile">
-                        <img class="img-circle" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" />
-                    </a>
-
-                    <div class="media-body">
-                        <h4 class=" text-center media-heading">Admin</h4>
-                        <p style="color:white" class="text-center">Log out</p>
-                        <p style="color:white" class="text-center"></p>
-                    </div>
 
             </div>
                 </li>
@@ -49,9 +40,15 @@
                 <li>
                     <router-link to="/admin/applications"><i class="glyphicon glyphicon-inbox"></i> Applications</router-link>
                 </li>
+                 <li>
+                    <router-link to="/admin/event-types"><i class="glyphicon glyphicon-question-sign"></i> Event Types</router-link>
+                </li>
+                 <li>
+                    <router-link to="/admin/post-categories"><i class="glyphicon glyphicon-book"></i> Post Categories</router-link>
+                </li>
             </ul>
         </nav>
-    </div>
+    </div >
         <router-view></router-view>
     </div>
 </div>  

@@ -1,4 +1,4 @@
-<template>
+    <template>
     <div id="wrapper">
         <div class="overlay"></div>
         <div id="page-content-wrapper" style="padding:40px;margin-top:40px;">

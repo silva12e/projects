@@ -8791,15 +8791,15 @@ nav .sidebar-nav i {
 
 .label {
   color: #EB4F26;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
 }
 
 .form-control {
   color: #000000 !important;
-  font-size: 25px;
+  font-size: 15px;
   border: none;
-  padding: 25px;
+  padding: 15px;
   padding-left: 10px;
   border-bottom: 1px solid #CCC;
   margin-bottom: 10px;
@@ -8987,5 +8987,61 @@ nav .sidebar-nav i {
   -ms-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   /*-webkit-font-smoothing:antialiased;*/
+}
+
+.paginate-ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.paginate-li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.paginate-list {
+  width: 159px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.paginate-list li {
+  display: block;
+}
+
+.paginate-list li:before {
+  content: '\26AC   ';
+  font-weight: bold;
+  color: slategray;
+}
+
+.paginate-links.items {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.paginate-links.items a {
+  cursor: pointer;
+}
+
+.paginate-links.items li.active a {
+  font-weight: bold;
+}
+
+.paginate-links.items li.next:before {
+  content: ' | ';
+  margin-right: 13px;
+  color: #ddd;
+}
+
+.paginate-links.items li.disabled a {
+  color: #ccc;
+  cursor: no-drop;
+}
+
+a {
+  color: #42b983;
 }
 

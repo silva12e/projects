@@ -6,7 +6,6 @@
                     <div class="profile-header-container" style="background-color:#94618e; color:white">   
                         <div class="profile-header-img">
                             <img class="img-circle" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" />
-                            <!-- badge -->
                             <div class="rank-label-container">
                                 <span style="color:white" class="label label-default rank-label">Author name</span>
                                   <div class="info" style="padding-top:20px;">
@@ -86,18 +85,16 @@
                 </div>
                 <div class="user-dashboard" style="color:black; background-color:white;padding-left:20px;"  >
 
-                    <div class="row">                      
-                    <div class="col-md-10 col-sm-10 col-xs-12 gutter">
-                        <h4 >Recently posted</h4>
+                    <div class="row">      
+                    <h4 >Recently posted</h4>                
+                    <div v-for="post in posts" class="col-md-10 col-sm-10 col-xs-12 gutter">
                         <div class="col-md-12">
-                            <h3>POST TITLE <small><i @click="show('edit')" class="glyphicon glyphicon-pencil"></i></small></h3>
-                            <p>'You ought to be ashamed of yourself for asking such a simple question,' added the Gryphon; and then they both sat silent and looked at poor Alice, who felt ready to sink into the earth. At last the Gryphon said to the Mock Turtle, 'Drive on, old fellow! Don't be all day about it!' and he went on in these words:
-                            'Yes, we went to school in the sea, though you mayn't believe it—'
-                            'I never said I didn't!' interrupted Alice.
-                            'You did,' said the Mock Turtle.</p>
+                            <h3>{{ post.title }}</h3>
+                            <p>{{ post.body }}</p>
                             <div>
-                        <span class="badge">Posted 2012-08-02 20:47:04 </span><span @click="show('author')" class="badge"> By: Author</span><div class="pull-right"></div>       
-                             </div>
+                                <span class="badge">Category: {{ post.category }}</span><span class="badge">Posted on {{ post.created_at }} </span><span @click="show('author')" class="badge"> By: {{ post.author }}</span><div class="pull-right">
+                            </div>  
+                           </div>
                             <hr>
                         </div>     
                             <hr>
@@ -145,9 +142,18 @@
      export default {
         data: function() {
             return{
-
+              posts:[],
             }
 
+            },
+            mounted()
+            {
+              axios.post('/admin/blog')
+                .then( response => {
+                  this.posts = response.data.posts;
+                })
+                .catch(error =>  {
+                })
             },
             methods:
             {

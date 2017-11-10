@@ -7,3 +7,5 @@ const Blog = Vue.component('blog', require('./components/admin/Blog.vue'));
 const Users = Vue.component('users', require('./components/admin/Users.vue'));
 const Profile = Vue.component('profile', require('./components/admin/Profile.vue'));
 const Applications = Vue.component('applications', require('./components/admin/Applications.vue'));
+const EventTypes = Vue.component('event-types', require('./components/admin/EventTypes.vue'));
+const PostCategories = Vue.component('post-categories', require('./components/admin/PostCategories.vue'));

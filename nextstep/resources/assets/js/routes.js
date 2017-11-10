@@ -29,6 +29,16 @@ export default [
             name: 'applications',
             component: require('./components/admin/Applications.vue'),
         },
+        {
+            path: '/admin/event-types',
+            name: 'eventTypes',
+            component: require('./components/admin/EventTypes.vue'),
+        },
+        {
+            path: '/admin/post-categories',
+            name: 'postCategories',
+            component: require('./components/admin/PostCategories.vue'),
+        },
         { path: '*', redirect: '/' }
 
         ]
