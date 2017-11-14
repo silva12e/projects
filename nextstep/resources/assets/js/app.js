@@ -10,11 +10,8 @@ import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css
 import VuePaginator from 'vuejs-paginator'
 
 
-
-
 window.Vue = require('vue');
 window.moment = require('moment');
-
 
 Vue.use(moment);
 Vue.use(VeeValidate);

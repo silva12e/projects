@@ -34,8 +34,7 @@
     		</div>
 		</modal>
 		<modal name="new-message" height="auto">
-			<div class="panel panel-default"  >
-        <!-- Message box title	-->    
+			<div class="panel panel-default"  >  
             <div class="panel-heading top-bar ">
                 <div class="col-md-10 col-xs-10" style="padding-top:20px;padding-bottom:20px;">
                     <h4 style="color:#cd5360;" class="panel-title"><span class="glyphicon glyphicon-comment"></span> New message</h4>
@@ -44,7 +43,6 @@
                     <a href="#"><span class="glyphicon glyphicon-minus icon_minim"></span></a>
                 </div>
             </div>
-     <!-- Message body	--> 
             <div class="panel-body msg_container_base">
               <br />
               <form action="#" style="padding-bottom:20px;">
