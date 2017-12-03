@@ -9,7 +9,24 @@ class Appointment extends Model
     protected $fillable = [
     	'vehicle_id',
     	'service_id',
-    	'client_id',
-    	'date_time',
-    ]
+    	'customer_id',
+    	'date',
+        'time'
+    ];
+
+    public function customer()
+    {
+        return $this->belongsTo('App\Customer');
+    }
+
+    public function vehicle()
+    {
+        return $this->belongsTo('App\Car', 'vehicle_id');
+    }
+
+    public function service()
+    {
+        return $this->belongsTo('App\Service');
+    }
+
 }

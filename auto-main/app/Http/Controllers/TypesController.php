@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Type;
+use App\Customer;
 use Illuminate\Http\Request;
 
 class TypesController extends Controller
@@ -16,8 +17,8 @@ class TypesController extends Controller
     public function getAllTypes()
     {
         $types = Type::with('service')->get();
-
-        return response()->json(['types'=>$types]);
+        $customers = Customer::all();
+        return response()->json(['types'=>$types,'customers'=>$customers]);
     }
 
     public function store(Request $request)

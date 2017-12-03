@@ -8,13 +8,17 @@ class Service extends Model
 {
     protected $fillable = [
     	'title',
-    	'vehicle_type',
+    	'type_id',
     	'description',
     	'price',
     ];
 
-    public function type()
-    {
-    	return $this->hasOne('App\Type');
-    }
+   public function type()
+   {
+        return $this->belongsTo(Service::class);
+   }
+   public function appointment()
+   {
+        return $this->hasMany(Appointment::class);
+   }
 }

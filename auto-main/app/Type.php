@@ -12,6 +12,11 @@ class Type extends Model
 
     public function service()
     {
-    	return $this->hasOne('App\Service', 'id');
+    	return $this->hasMany(Service::class);
+    }
+
+    public function car()
+    {
+    	return $this->belongsTo(Car::class);
     }
 }

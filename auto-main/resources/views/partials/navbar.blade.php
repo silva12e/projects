@@ -20,6 +20,12 @@
                 <li>
                     <a href="/vehicle-types/" role="button"><i class="fa fa-tag"></i> Vehicle Types</a>
                 </li>
+                <li>
+                    <a href="/vehicles/" role="button"><i class="fa fa-car"></i> Vehicles</a>
+                </li>
+                 <li>
+                    <a href="/customers/" role="button"><i class="fa fa-user"></i> Customers</a>
+                </li>
             </ul>
         </div>
     </div>

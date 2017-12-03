@@ -14,9 +14,6 @@
 		</div>
 		<div class="row">
 			<div class="container content" style="padding:20px; padding-left:60px;">
-				<!-- <diesel-car></diesel-car>
-				<gas-car></gas-car>
-				<electric-car></electric-car> -->
 				<car-services></car-services>
 			</div>
 		</div>
